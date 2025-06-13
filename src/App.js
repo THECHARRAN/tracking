@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './Auth/loginpage/login';
 import Dashboard from './pages/dashboard';
-import Shipment from './shipment';
+import Shipment from './pages/shipment';
 import MetricsPanel from './pages/metricspanel/metrixpanel'; 
 import Forget from './Auth/forgetpage/forget_password';  
 import Reset from './Auth/resetpassword/resetpassword';

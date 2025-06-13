@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "../sidebar";
+import Sidebar from "../layout/sidebar";
 // import GlobeIframe from "./GlobeIframe"; // Uncomment if you want to use the globe visualization
 // import Globe from "react-globe.gl"; // Uncomment if you want to use the globe visualization
 const shipmentsData = [
