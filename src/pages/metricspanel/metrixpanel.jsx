@@ -1,6 +1,7 @@
 import React from 'react';
-import Sidebar from '../../sidebar';
-import Shipment from '../../shipment';
+import Sidebar from '../../layout/sidebar';
+import Shipment from '../shipment';
+
 import {
   FaShippingFast,
   FaCheckCircle,
