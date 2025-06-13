@@ -1,0 +1,78 @@
+.role-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #05010b 0%, #07021b 100%), 
+              url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  padding: 30px;
+}
+
+.role-title {
+  font-size: 36px;
+  color: #00bfff;
+  margin-bottom: 40px;
+}
+
+.role-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  perspective: 1500px; /* to give some depth */
+}
+
+.role-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.role-card:hover {
+  transform: translateY(-15px) scale(1.08);
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.8);
+}
+
+.role-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.role-card p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Curvature - more pronounced */
+.admin {
+  transform: rotateY(40deg) translateY(50px);
+}
+
+.user {
+  transform: rotateY(20deg) translateY(30px);
+}
+
+.agent {
+  transform: rotateY(0deg) translateY(10px);
+}
+
+.manager {
+  transform: rotateY(-20deg) translateY(30px);
+}
+
+.worker {
+  transform: rotateY(-40deg) translateY(50px);
+}
