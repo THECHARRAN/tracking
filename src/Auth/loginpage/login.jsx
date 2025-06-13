@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FaEnvelope, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './login.css';  // Login CSS
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
   const { role } = useParams();
@@ -32,16 +34,31 @@ const Login = () => {
               autoComplete="off"
               spellCheck="false"
             />
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="login-input"
-              autoComplete="off"
-              spellCheck="false"
-            />
-
+            <div style={{ position: 'relative' }}>
+                          <input
+                            type={showPassword ? 'text' : 'password'}
+                            placeholder="Enter your new password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="login-input"
+                            autoComplete="off"
+                            spellCheck="false"
+                          />
+                          <span
+                            onClick={() => setShowPassword(!showPassword)}
+                            style={{
+                              position: 'absolute',
+                              right: '15px',
+                              top: '50%',
+                              transform: 'translateY(-50%)',
+                              cursor: 'pointer',
+                              color: '#aaa',
+                              fontSize: '18px'
+                            }}
+                          >
+                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                          </span>
+                        </div>
             <div className="login-options">
               <label>
                 <input
