@@ -180,7 +180,7 @@ const Dashboard = () => {
                     key={s.id}
                     onClick={() => setSelectedShipment(s)}
                     style={{
-                      cursor: "pointer",
+                       cursor:('/public/cursor.cur'),
                       backgroundColor:
                         selectedShipment?.id === s.id ? "#333" : "transparent",
                       transition: "background-color 0.3s ease",

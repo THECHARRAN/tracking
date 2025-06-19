@@ -8,7 +8,10 @@ import Forget from './Auth/forgetpage/forget_password';
 import Reset from './Auth/resetpassword/resetpassword';
 import Conform from './Auth/Changepassword/changepassword';
 import RoleSelection from './Auth/roleselection/roleselection';
-
+import OpenStreetMap from './pages/openstreetmap';
+import Tracking from './pages/tracking';
+import About from './pages/about/about';  
+import './App.css'; // Import your CSS file for styling
 function App() {
   return (
     <Router>
@@ -22,6 +25,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/shipment" element={<Shipment />} />
         <Route path="/metricspanel" element={<MetricsPanel />} />
+        <Route path="/openstreetmap" element={<OpenStreetMap />} />
+        <Route path="/tracking" element={<Tracking />} />
+        <Route path="/about" element={<About />} />
         {/* Redirect any unknown route to /login */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

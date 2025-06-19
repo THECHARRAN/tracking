@@ -16,8 +16,8 @@ const Sidebar = () => {
     { icon: <LayoutDashboard />, label: "Dashboard", path: "/dashboard" },
     { icon: <Truck />, label: "Shipment", path: "/shipment" },
     { icon: <BarChart2 />, label: "Analytics", path: "/metricspanel" },
-    { icon: <Settings />, label: "Settings", path: "/settings" },
-    { icon: <User />, label: "Profile", path: "/profile" }
+    { icon: <Settings />, label: "Settings", path: "/openstreetmap" },
+    { icon: <User />, label: "Profile", path: "/tracking" }
   ];
 
   return (

@@ -105,12 +105,22 @@ const Shipment = () => {
     loadCountryBorders();
 
     const popup = document.createElement("div");
-    Object.assign(popup.style, {
-      position: "absolute", background: "#ffffffee", padding: "10px", border: "2px solid #000",
-      borderRadius: "8px", display: "none", pointerEvents: "none", zIndex: 1000
-    });
-    mount.appendChild(popup);
-    popupRef.current = popup;
+Object.assign(popup.style, {
+  position: "absolute",
+  background: "rgba(14, 0, 0, 0.9)",  // Dark transparent background
+  padding: "12px",
+  border: "1px solid #aaa",
+  borderRadius: "8px",
+  display: "none",
+  pointerEvents: "none",
+  zIndex: 1000,
+  color: "#fff",   // White text
+  fontFamily: "'Poppins', sans-serif",
+  boxShadow: "0 0 10px rgba(0,0,0,0.5)"
+});
+mount.appendChild(popup);
+popupRef.current = popup;
+
 
     const detailPanel = document.createElement("div");
     Object.assign(detailPanel.style, {
@@ -184,6 +194,7 @@ const Shipment = () => {
   }
 
   function showPopup(marker) {
+    
     const worldPosition = marker.getWorldPosition(new THREE.Vector3());
     const vector = worldPosition.clone().project(cameraRef.current);
     const x = (vector.x * 0.5 + 0.5) * window.innerWidth;
@@ -238,14 +249,18 @@ const Shipment = () => {
   }
 
   return (
-    <>
-      <div style={{ position: "absolute", top: 10, left: 10, zIndex: 100 }}>
-        <input id="searchInput" placeholder="Enter Shipper ID" />
-        <button onClick={handleSearch}>Search</button>
-      </div>
-      <div ref={mountRef} style={{ width: "100%", height: "100vh" }} />
-    </>
-  );
+  <div style={{ position: "relative", width: "100%", height: "100%" }}>
+    {/* Search bar inside card */}
+    <div style={{ position: "absolute", top: 10, left: 10, zIndex: 100 }}>
+      <input id="searchInput" placeholder="Enter Shipper ID" />
+      <button onClick={handleSearch}>Search</button>
+    </div>
+
+    {/* Earth inside card */}
+    <div ref={mountRef} style={{ width: "100%", height: "500px",marginTop: "0" }} />
+    
+  </div>
+)
 };
 
 export default Shipment;

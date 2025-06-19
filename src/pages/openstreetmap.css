@@ -1,0 +1,21 @@
+.loader-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #131417;
+}
+
+.spinner {
+  border: 6px solid #222;       /* Outer border */
+  border-top: 6px solid #00ffc3; /* Spinner color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
