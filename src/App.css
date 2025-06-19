@@ -1,0 +1,16 @@
+body {
+  cursor: url('/public/cursor(normal).cur'), auto !important;
+}
+
+.leaflet-container, canvas {
+  cursor: url('/public/cursor.cur'), auto !important;
+}
+
+/* Optional: On hover (e.g., red cursor for hover) */
+button:hover {
+  cursor: url('/public/cursor (3).cur'), pointer !important;
+}
+/* Apply to all Leaflet markers */
+.leaflet-marker-icon {
+  cursor: url('/public/cursor (3).cur'), pointer !important;
+}
